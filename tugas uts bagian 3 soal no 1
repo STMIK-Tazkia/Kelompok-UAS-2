@@ -1,0 +1,18 @@
+# Himpunan A yang diberikan
+A = {109, 222, 120, 150, 200, 321, 410, 120, 230, 300, 111, 89, 70, 45, 57, 31, 39, 900, 21, 378, 400, 101, 201, 301, 1}
+
+# Fungsi bubble sort, list untuk memudahkan sorting
+def bubble_sort(ti):
+    ti = list(ti)  
+    n = len(ti)
+    
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if ti[j] > ti[j+1]:
+                ti[j], ti[j+1] = ti[j+1], ti[j]
+    
+    return ti
+
+# Hasil setelah diurutkan
+terurut_A = bubble_sort(A)
+print("Himpunan A yang terurut:", terurut_A)
